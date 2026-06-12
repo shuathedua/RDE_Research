@@ -1,0 +1,76 @@
+# ============================================================
+# Site configuration — edit the marked lines before deploying
+# ============================================================
+
+# CHANGE THIS: your final URL. For GitHub Pages without a custom
+# domain it's https://<username>.github.io/<repo-name>/
+# With a custom domain: https://yourdomain.com/
+baseURL: "https://shuathedua.github.io/RDE_Research/"
+
+title: "Rotating Detonation Engine Notes"            # CHANGE THIS: your blog title
+languageCode: "en-us"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Needed so KaTeX can render LaTeX written in Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # allows raw HTML in Markdown (figures, captions)
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    style: monokai
+
+params:
+  env: production
+  description: "Reading notes and analysis on Rotating Detonation Engines and rocket propulsion"
+  author: "Joshua Lee"                     # CHANGE THIS: your name
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  math: true                         # enables KaTeX site-wide
+
+  homeInfoParams:
+    Title: "Rotating Detonation Engine Notes"
+    Content: >
+      Reading notes, derivations, and analysis on Rotating Detonation
+      Engines and pressure-gain combustion — written by an aerospace
+      engineering graduate student working toward a career in propulsion.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/shuathedua"     # CHANGE THIS
+    - name: linkedin
+      url: "https://linkedin.com/in/joshua-lee-00a957129" # CHANGE THIS
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON   # required for PaperMod's built-in search
