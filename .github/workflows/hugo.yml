@@ -22,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.145.0  # pinned to match the vendored PaperMod v8.0 theme
+      HUGO_VERSION: 0.163.1  # matches the vendored PaperMod theme (Jun 2026)
     steps:
       - name: Install Hugo CLI
         run: |
